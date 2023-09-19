@@ -1,0 +1,43 @@
+.Tile {
+    border: 10px solid #000; /* Grey border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Add padding for spacing */
+  
+    height: 200px;
+    width: 200px;
+
+    /*display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 300px;
+  
+    position: relative;*/
+  }
+  
+  /*h1 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  ol {
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ol li {
+    margin: 5px 0;
+  }
+  
+  a[href="https://www.google.com"] {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }*/
+  
