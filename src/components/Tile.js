@@ -7,14 +7,16 @@ function Tile() {
             Connect 4
         </h1>
         <p>
-            One sentence of the technology
+            One sentence of the technology.
         </p>
-        <ol>
-            <li>Java</li>
-            <li>Python</li>
-            <li>AWS</li>
-        </ol>
-        <a href="https://www.google.com">Src</a>
+        <div className='TileBottom'>
+          <ol>
+              <li>Java</li>
+              <li>Python</li>
+              <li>AWS</li>
+          </ol>
+          <a href="https://www.google.com">src</a>
+        </div>
       </div>
     );
   }
