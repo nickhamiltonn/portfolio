@@ -1,31 +1,34 @@
 .Tile {
-    border: 10px solid #000; /* Grey border */
-    border-radius: 10px; /* Rounded corners */
-    padding: 20px; /* Add padding for spacing */
-  
-    height: 200px;
-    width: 200px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
 
-    /*display: flex;
+    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    height: 300px;
-  
-    position: relative;*/
+    flex-wrap: nowrap;
+
+    padding-top: 0px;
+
+    height: 150px;
+    width: 225px;
   }
   
-  /*h1 {
-    text-align: center;
-    margin-bottom: 10px;
+  .Tile h1 {
+    position: relative;
+    font-size: 22px;
+    margin: 0%;
+    border-bottom: 2px solid #ccc;
   }
   
-  p {
-    text-align: center;
-    margin-bottom: 10px;
+  .Tile p {
+    font-size: 14px;
+    text-align: left;
+    padding-left: 35%;
+    padding-top: 5px;
+    margin: 0%;
+    color: rgb(94, 94, 94);
   }
   
-  ol {
+  /*ol {
     text-align: center;
     list-style-type: none;
     padding: 0;
@@ -33,11 +36,6 @@
   
   ol li {
     margin: 5px 0;
-  }
-  
-  a[href="https://www.google.com"] {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
   }*/
+  
   

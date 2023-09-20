@@ -4,14 +4,14 @@ function Tile() {
     return (
       <div className="Tile">
         <h1>
-            <a href="https://www.google.com">Connect 4</a>
+            Connect 4
         </h1>
         <p>
             One sentence of the technology
         </p>
         <ol>
             <li>Java</li>
-            <li>Poo-thon</li>
+            <li>Python</li>
             <li>AWS</li>
         </ol>
         <a href="https://www.google.com">Src</a>
