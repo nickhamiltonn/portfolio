@@ -1,9 +1,12 @@
 .TileGallery {
     border: 1px solid #ccc;
     border-radius: 10px;
+    width: 85%;
+    margin: auto;
+}
+
+.ListOfTiles {
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 10px;
-    width: 85%;
-    margin: auto;
-  }
+}

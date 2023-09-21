@@ -1,19 +1,18 @@
 import Tile from './Tile';
 import './TileGallery.css';
+import GalleryHeader from './GalleryHeader';
 
 function TileGallery() {
     return (
       <div className="TileGallery">
-        <Tile>
-        </Tile>
-        <Tile>
-        </Tile>
-        <Tile>
-        </Tile>
-        <Tile>
-        </Tile>
-        <Tile>
-        </Tile>
+        <GalleryHeader />
+        <div className="ListOfTiles">
+          <Tile />
+          <Tile />
+          <Tile />
+          <Tile />
+          <Tile />
+        </div>
       </div>
     );
   }
