@@ -1,4 +1,4 @@
-projects = [
+const projects = [
     {
         "name": "Distributed Key-Value Store",
         "short_description": "Created/deployed distributed KV store with 40+ nodes, able to concurrently handle 2048+ clients",
@@ -7,3 +7,5 @@ projects = [
         "date": new Date(2023, 3)
     }
 ]
+
+export default projects;

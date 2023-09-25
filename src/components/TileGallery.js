@@ -2,19 +2,23 @@ import Tile from './Tile';
 import './TileGallery.css';
 import GalleryHeader from './GalleryHeader';
 
-function TileGallery() {
-    return (
-      <div className="TileGallery">
-        <GalleryHeader />
-        <div className="ListOfTiles">
-          <Tile />
-          <Tile />
-          <Tile />
-          <Tile />
-          <Tile />
-        </div>
+const renderTiles = (projects) => {
+  var projectsJSX = []
+  projects.forEach(project => {
+    projectsJSX.push(<Tile project={project}/>)
+  });
+}
+
+// need to add state to make filters and stuff work
+function TileGallery(props) {
+  return (
+    <div className="TileGallery">
+      <GalleryHeader />
+      <div className="ListOfTiles">
+        {renderTiles(props.projects)}
       </div>
-    );
-  }
+    </div>
+  );
+}
   
-  export default TileGallery;
+ export default TileGallery;
