@@ -8,5 +8,5 @@
 .ListOfTiles {
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 10px;
+    padding: 5px;
 }

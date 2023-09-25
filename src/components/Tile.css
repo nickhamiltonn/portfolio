@@ -1,8 +1,7 @@
 .Tile {
   border: 1px solid #ccc;
   border-radius: 10px;
-  margin-top: 10px;
-  margin-left: 10px;
+  margin: 5px;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
