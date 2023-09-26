@@ -1,21 +1,21 @@
 import './Tile.css';
 
-function Tile() {
+function Tile(props) {
     return (
       <div className="Tile">
-        <h1>
-            Connect 4
-        </h1>
+        <div className='TileHeader'>
+          <h1>
+              {props.project.name}
+          </h1>
+        </div>
         <p>
-            One sentence of the technology.
+            {props.project.short_description}
         </p>
         <div className='TileBottom'>
           <ol>
-              <li>Java</li>
-              <li>Python</li>
-              <li>AWS</li>
+              {props.project.tools.map(tool => (<li>{tool}</li>))}
           </ol>
-          <a href="https://www.google.com">src</a>
+          {(props.project.src ? <a href={props.project.src}>src</a> : <></>) }
         </div>
       </div>
     );

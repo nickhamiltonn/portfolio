@@ -7,6 +7,7 @@ const renderTiles = (projects) => {
   projects.forEach(project => {
     projectsJSX.push(<Tile project={project}/>)
   });
+  return projectsJSX;
 }
 
 // need to add state to make filters and stuff work

@@ -6,17 +6,27 @@
   flex-direction: column;
   flex-wrap: nowrap;
   padding-top: 0px;
-  height: 125px;
-  width: 225px;
+  height: 150px;
+  width: 250px;
+}
+
+.TileHeader {
+padding-top: 5px;
+padding-bottom: 5px;
+padding-left: 10px;
+padding-right: 10px;
+border-bottom: 1px solid #ccc;
+height: 39px;
+display: -webkit-flex;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 
 .Tile h1 {
-position: relative;
-font-size: 20px;
-padding-top: 5px;
-padding-bottom: 5px;
-margin: 0%;
-border-bottom: 1px solid #ccc;
+font-size: 16px;
+margin-top: 0;
+margin-bottom: 0;
 }
 
 .Tile p {
@@ -24,8 +34,16 @@ font-size: 14px;
 text-align: left;
 padding-left: 35%;
 padding-top: 10px;
+padding-right: 2px;
 margin: 0%;
 color: rgb(94, 94, 94);
+
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 3;
+overflow: hidden;
+text-overflow: ellipsis;
+
 }
 
 .TileBottom {
@@ -39,6 +57,8 @@ ol {
 width: 70%;
 display: flex;
 margin-bottom: 0;
+margin-top: 0;
+margin-left: 2px;
 flex-wrap: nowrap;
 list-style-type: none;
 padding: 0;
@@ -50,7 +70,6 @@ padding-left: 5px;
 padding-right: 5px;
 padding-top: 2px;
 padding-bottom: 2px;
-margin-top: 5px;
 margin-bottom: 5px;
 margin-left: 2px;
 margin-right: 2px;
