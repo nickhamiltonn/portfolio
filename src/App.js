@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import TileGallery from './components/TileGallery';
 import projects from './content/projects';

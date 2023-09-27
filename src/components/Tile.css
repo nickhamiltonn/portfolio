@@ -53,8 +53,7 @@ justify-content: space-between;
 margin-top: auto;
 }
 
-ol {
-width: 70%;
+ul {
 display: flex;
 margin-bottom: 0;
 margin-top: 0;
@@ -62,9 +61,12 @@ margin-left: 2px;
 flex-wrap: nowrap;
 list-style-type: none;
 padding: 0;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
 }
 
-ol li {
+ul li {
 font-size: 14px;
 padding-left: 5px;
 padding-right: 5px;
