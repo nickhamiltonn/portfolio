@@ -1,0 +1,3 @@
+GalleryHeader:
+- Need to implement filtering+sorting
+- Bug where filtering+sorting window get overlapped the tags in the tiles when the screen is small...
