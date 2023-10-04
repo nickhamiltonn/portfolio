@@ -47,6 +47,11 @@
     padding: 5px;
 }
 
+.Dropdown .FilterOptions {
+    padding-bottom: 10px;
+}
+
+
 .container {
     display: block;
     position: relative;
