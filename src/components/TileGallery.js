@@ -12,17 +12,17 @@ const renderTiles = (projects) => {
   return projectsJSX;
 }
 
-// need to add state to make filters and stuff work
+
 function TileGallery(props) {
   const projects = props.projects;
-  const [filters, setFilters] = useState([]); // TODO: need to revisit if dict makes the most sense here
+  const [filters, setFilters] = useState([]);
   const [filterSelector, setFilterSelector] = useState("any"); // TODO: make "any"/"all" an enum?
 
   console.log(filters);
   console.log(filterSelector);
 
   // TODO: Look more into naming conventions... these names are pretty busted rn
-  const handleFilterSelector = (newState) => {
+  const handleFilterSelectorChange = (newState) => {
     setFilterSelector(newState)
   }
 
@@ -54,7 +54,6 @@ function TileGallery(props) {
     
   const addFilterOption = (filterOption) => {
     if (filters.indexOf(filterOption) == -1) {
-      console.log("trying to add filter");
       setFilters([
         ...filters,
         filterOption
@@ -81,7 +80,7 @@ function TileGallery(props) {
       <GalleryHeader 
         addFilterOption={addFilterOption} 
         removeFilterOption={removeFilterOption}
-        handleFilterSelector={handleFilterSelector} />
+        onFilterSelectorChange={handleFilterSelectorChange} />
       <div className="ListOfTiles">
         {renderTiles(displayedProjects)}
       </div>

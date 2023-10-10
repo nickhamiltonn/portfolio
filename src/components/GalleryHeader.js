@@ -27,9 +27,9 @@ function GalleryHeader(props) {
     return filtersJSX;
   }
 
-  // TODO: Make it so that "any of..." is obviously the default value
-  const handleFilterRadio = (event) =>  {
-    props.handleFilterSelector(event.target.value);
+  // TODO: Make it so that "any of..." is the obvious default value
+  const handleFilterRadioChange = (event) =>  {
+    props.onFilterSelectorChange(event.target.value);
   }
 
   return (
@@ -43,7 +43,7 @@ function GalleryHeader(props) {
       <div className="Hover Filter">
         Filter By...
         <div className="Dropdown Filter">
-          <div className = "FilterOptions" onChange={handleFilterRadio}>
+          <div className = "FilterOptions" onChange={handleFilterRadioChange}>
             <label className="Radio">
               <input type="radio" value="any" name="filter_criteria" />
               Any of...
