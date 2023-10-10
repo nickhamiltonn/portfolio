@@ -24,6 +24,36 @@ const projects = [
         "date": new Date(2023, 3),
         "src": ""
     },
+    {
+        "name": "Test old JS project",
+        "short_description": "Did js project a long time ago",
+        "long_description": "",
+        "tools": [
+            Tags.Languages.Javascript, 
+            Tags.Frameworks.React,],
+        "date": new Date(2020, 1),
+        "src": ""
+    },
+    {
+        "name": "somewhat old JS project",
+        "short_description": "Did js project pretty long ago",
+        "long_description": "",
+        "tools": [
+            Tags.Languages.Javascript, 
+            Tags.Frameworks.React,],
+        "date": new Date(2020, 12),
+        "src": ""
+    },
+    {
+        "name": "New JS project",
+        "short_description": "Most recent Javascript project, this is still a test",
+        "long_description": "",
+        "tools": [
+            Tags.Languages.Javascript, 
+            Tags.Frameworks.React,],
+        "date": new Date(2023, 8),
+        "src": ""
+    },
 ]
 
 export default projects;

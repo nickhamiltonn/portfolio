@@ -17,20 +17,28 @@ function TileGallery(props) {
   const projects = props.projects;
   const [filters, setFilters] = useState([]);
   const [filterSelector, setFilterSelector] = useState("any"); // TODO: make "any"/"all" an enum?
+  const [sortOption, setSortOption] = useState("new_first"); // TODO: make this an enum?
 
   console.log(filters);
   console.log(filterSelector);
+  console.log(sortOption);
 
-  // TODO: Look more into naming conventions... these names are pretty busted rn
   const handleFilterSelectorChange = (newState) => {
     setFilterSelector(newState)
   }
 
-  // This code is absolutely trash but it works
-  // TODO: Clean this up
+  const handleSortOptionChange = (newOption) => {
+    setSortOption(newOption);
+  }
+
+  // This code is absolutely trash but it works...
+  // TODO: Clean this up, could be split into a couple functions and logic could def
+  // be cleaned up...
   const setDisplayedProjects = () => {
+    let organizedProjects = projects;
+    
     if (filters.length > 0) {
-      return projects.filter((proj) => {
+      organizedProjects = projects.filter((proj) => {
         if (filterSelector == "any") {
           for (var i=0; i<filters.length; i++) {
             if (proj.tools.indexOf(filters[i]) != -1) {
@@ -47,11 +55,20 @@ function TileGallery(props) {
           return true;
         }
       });
-    } else {
-      return projects;
     }
+
+    organizedProjects.sort((a, b) => {
+      if (a.date < b.date) {
+        return (sortOption == "old_first" ? -1 : 1);
+      } else {
+        return (sortOption == "old_first" ? 1 : -1);
+      }
+    })
+
+    return organizedProjects;
   }
-    
+  
+  // TODO: Look more into naming conventions... these names are pretty busted rn
   const addFilterOption = (filterOption) => {
     if (filters.indexOf(filterOption) == -1) {
       setFilters([
@@ -80,7 +97,8 @@ function TileGallery(props) {
       <GalleryHeader 
         addFilterOption={addFilterOption} 
         removeFilterOption={removeFilterOption}
-        onFilterSelectorChange={handleFilterSelectorChange} />
+        onFilterSelectorChange={handleFilterSelectorChange} 
+        onSortOptionChange={handleSortOptionChange}/>
       <div className="ListOfTiles">
         {renderTiles(displayedProjects)}
       </div>

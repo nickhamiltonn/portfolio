@@ -10,6 +10,10 @@ function GalleryHeader(props) {
       props.removeFilterOption(filterOption);
     }
   }
+
+  const handleSortSelectChange = (event) => {
+    props.onSortOptionChange(event.target.value);
+  } 
   
   const generateFilterOptions = () => {
     var filtersJSX = []
@@ -32,12 +36,17 @@ function GalleryHeader(props) {
     props.onFilterSelectorChange(event.target.value);
   }
 
+  // TODO: Make new_first/old_first an enum???
+  // TODO: Need to fix bug where the window gets overlapped by the tags in the tiles....
   return (
     <div className="GalleryHeader">
       <div className="Hover Sort">
         Sort By...
         <div className="Dropdown Sort">
-          This is where we select sort criteria
+          <select name="sort_criteria" className = "SortOptions" onChange={handleSortSelectChange}>
+            <option value="new_first">Newest to Oldest</option>
+            <option value="old_first">Oldest to Newest</option>
+          </select>
         </div>
       </div>
       <div className="Hover Filter">
