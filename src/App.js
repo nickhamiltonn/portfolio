@@ -1,14 +1,15 @@
-import { AppBar } from '@mui/material';
-
 import './App.css';
-import ResponsiveAppBar from './components/ResponsiveAppBar';
 import TileGallery from './components/TileGallery';
+import AppHeader from './components/AppHeader';
 import projects from './content/projects';
 
+import { Element } from 'react-scroll';
 
+// TODO: Need to make all classNames kebab-case instead of PascalCase...
 function App() {
   return (<>
-      <ResponsiveAppBar />
+      <AppHeader>
+      </AppHeader>
       <p>
         This is going to be a cool hero component thing with a photo of me (and other things), short description, and link to github and linkedin...
       </p>
@@ -31,9 +32,11 @@ function App() {
       <p>
         This is where I should have a long section outlining more about what I want to do career wise. What I am looking for, what my hobbies are, etc. Maybe a section about my skills
       </p>
-      <h1>
-        Contact
-      </h1>
+      <Element name="contact">
+        <h1>
+          Contact
+        </h1>
+      </Element>
       <p>
         In a coloured box I am going to have my contact information (and possibly a form that will allow user to directly email me through the site)
       </p>
