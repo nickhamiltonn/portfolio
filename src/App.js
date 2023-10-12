@@ -1,6 +1,7 @@
 import './App.css';
 import TileGallery from './components/TileGallery';
-import AppHeader from './components/AppHeader';
+import Home from './components/Home';
+import NavBar from './components/NavBar';
 import projects from './content/projects';
 
 import { Element } from 'react-scroll';
@@ -8,11 +9,9 @@ import { Element } from 'react-scroll';
 // TODO: Need to make all classNames kebab-case instead of PascalCase...
 function App() {
   return (<>
-      <AppHeader>
-      </AppHeader>
-      <p>
-        This is going to be a cool hero component thing with a photo of me (and other things), short description, and link to github and linkedin...
-      </p>
+      <NavBar>
+      </NavBar>
+      <Home />
       <h1>
         Work Experience
       </h1>

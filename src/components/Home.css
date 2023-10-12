@@ -1,0 +1,51 @@
+.home {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(
+            to bottom,
+            rgba(200, 124, 209, 0.8),
+            white
+        ),
+        url("../resources/topography.svg");
+    background-position-x: center;
+    background-position-y: center;
+    background-size: initial, initial;
+    background-attachment: initial, initial;
+    background-origin: initial, initial;
+    background-clip: initial, initial;
+    background-color: initial;
+
+    text-align: center;
+}
+
+.home-content {
+    width: 40vh;
+    margin-right: 20vh;
+}
+
+.home h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.home-sub1 {
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+.home-sub2 {
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.home img {
+    border-radius: 50%;
+    width: 50vh;
+    height: 50vh;
+    object-fit: cover;
+    object-position: 0px 0px;
+}

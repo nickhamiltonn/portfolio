@@ -1,12 +1,12 @@
-import './AppHeader.css';
+import './NavBar.css';
 
 import { Link } from 'react-scroll';
 
-function AppHeader(props) {
+function NavBar() {
   return (
-    <div class="app-header">
+    <div class="navbar">
         <a class="logo">Nick</a>
-        <div class="app-header-right">
+        <div class="navbar-right">
             <Link spy={true} smooth={true} duration={500}>
                 Home
             </Link>
@@ -21,4 +21,4 @@ function AppHeader(props) {
   );
 }
   
-  export default AppHeader;
+export default NavBar;
