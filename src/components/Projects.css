@@ -1,0 +1,8 @@
+.projects {
+    height: 95vh;
+    background-image: linear-gradient(
+            to top,
+            rgba(200, 124, 209, 0.8),
+            white
+        );
+}

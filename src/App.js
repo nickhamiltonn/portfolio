@@ -1,8 +1,7 @@
 import './App.css';
-import TileGallery from './components/TileGallery';
 import Home from './components/Home';
+import Projects from './components/Projects';
 import NavBar from './components/NavBar';
-import projects from './content/projects';
 
 import { Element } from 'react-scroll';
 
@@ -12,18 +11,14 @@ function App() {
       <NavBar>
       </NavBar>
       <Home />
+      <Projects />
       <h1>
         Work Experience
       </h1>
       <p>
         This is where I should put a dynamic section about my work experience
       </p>
-      <h1>
-        Projects
-      </h1>
       <div className="App">
-        <TileGallery projects={projects}>
-        </TileGallery>
       </div>
       <h1>
         About Me
