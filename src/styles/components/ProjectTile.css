@@ -1,0 +1,73 @@
+.tile {
+  height: 20vh;
+  width: 30vh;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.tile p {
+  font-size: 14px;
+  text-align: left;
+  padding-left: 35%;
+  padding-top: 5%;
+  padding-right: 2px;
+  margin: 0%;
+  color: rgb(94, 94, 94);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;  
+}
+
+.tile-header {
+  height: 25%;
+  padding: 5px 10px;
+  border-bottom: 1px solid #ccc;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* TODO: Make title get centred properly */
+.tile-header h1 {
+  font-size: 16px;
+}
+
+.tile-bottom {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.tile-bottom ul {
+  display: flex;
+  margin: 0 0 0 2px;
+  flex-wrap: nowrap;
+  list-style-type: none;
+  padding: 0;
+  overflow: hidden;
+}
+
+.tile-bottom li {
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  color: rgb(94, 94, 94);
+  padding: 2px 5px;
+  margin: 0 2px 5px
+}
+
+.tile-bottom a {
+  font-size: 14px;
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  text-decoration: none;
+}
+

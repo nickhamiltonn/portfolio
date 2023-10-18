@@ -4,6 +4,7 @@
     top: 0;
     left: 0;
     right: 0;
+    height: 5VH;
     background-color: #f1f1f1;
     padding: 10px 50px;
 }
@@ -27,7 +28,6 @@
 
 .navbar a:hover {
     background-color: #ddd;
-    color: black;
 }
 
 .navbar-right {

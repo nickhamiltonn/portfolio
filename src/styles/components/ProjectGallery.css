@@ -1,4 +1,4 @@
-.TileGallery {
+.project-gallery {
     background-color: white;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -6,8 +6,10 @@
     margin: auto;
 }
 
-.ListOfTiles {
+.projects-list {
     display: flex;
     flex-wrap: wrap;
     padding: 5px;
+    /* Makes ProjectTiles appear behind header dropdowns */
+    z-index: 0;
 }

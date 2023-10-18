@@ -1,70 +1,74 @@
-.GalleryHeader {
+.project-gallery-header {
     display: flex;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #ccc;
     flex-direction: row-reverse;
+    padding: 5px 0px;
+    border-bottom: 1px solid #ccc;
 }
 
-.Hover {
+.hover {
     font-size: 14px;
     border: 1px solid #ccc;
-    color: rgb(94, 94, 94);
     border-radius: 10px;
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top: 2px;
-    padding-bottom: 2px;
+    color: rgb(94, 94, 94);
+    padding: 2px 5px;
     margin-right: 4px;
     position: relative;
 }
 
-.Dropdown {
-    /*display: none;*/
+.dropdown {
     display: none;
     position: absolute;
-    padding: 10px;
-    margin-top: 2px;
+    width: 25vh;
     right: 0%;
-    width: 200px;
-    /*height: 200px;*/
-    background-color: #f9f9f9;
-    color: rgb(94, 94, 94);
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    color: rgb(94, 94, 94);
+    background-color: #f9f9f9;
     border: 1px solid #ccc;
     border-radius: 10px;
+    padding: 10px;
+    margin-top: 2px;
+    /* Makes dropdown windows appear in front of ProjectTiles */
+    z-index: 1;
 }
 
-.Dropdown .Category {
-    margin-bottom: 10px;
+.dropdown .tools-category {
+    display: inline-block;
     width: 100%;
-    padding-bottom: 2px;
+    text-align: center;
     border-bottom: 1px solid #ccc;
-    display:inline-block;
+    margin-bottom: 10px;
+    padding-bottom: 2px;
 }
 
-.Dropdown .Radio {
-    padding: 5px;
+.dropdown .radio {
+    padding: 2px 10px 5px;
 }
 
-.Dropdown .FilterOptions {
+.dropdown .filter-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding-bottom: 10px;
 }
 
-.Dropdown.Sort {
-    padding-top: 20px;
-    padding-bottom: 20px;
+.dropdown.sort {
+    padding: 20px 0px;
 }
 
-.Dropdown .SortOptions {
+.dropdown .sort-options {
+    display: block;
     color: rgb(94, 94, 94);
     border: 1px solid #ccc;
     border-radius: 10px;
     padding: 2px;
+    margin: 0 auto;
 }
 
+.hover:hover .dropdown {
+    display: block;
+}
 
-.container {
+.filter-container {
     display: block;
     position: relative;
     padding-left: 35px;
@@ -78,7 +82,7 @@
 }
 
 /* Hide the browser's default checkbox */
-.container input {
+.filter-container input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
@@ -97,27 +101,24 @@
     background-color: #eee;
 }
 
-.container:hover input ~ .checkmark {
+.filter-container:hover input ~ .checkmark {
     background-color: #ccc;
 }
 
-.container input:checked ~ .checkmark {
+.filter-container input:checked ~ .checkmark {
     background-color: #2196F3;
 }
 
-/* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
     content: "";
     position: absolute;
     display: none;
 }
 
-/* Show the checkmark when checked */
-.container input:checked ~ .checkmark:after {
+.filter-container input:checked ~ .checkmark:after {
     display: block;
 }
 
-/* Style the checkmark/indicator */
 .container .checkmark:after {
     left: 6px;
     top: 2px;
@@ -130,7 +131,4 @@
     transform: rotate(45deg);
 }
 
-.Hover:hover .Dropdown {
-    display: block;
-}
 
