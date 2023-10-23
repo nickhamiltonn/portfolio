@@ -7,6 +7,8 @@
     height: 5VH;
     background-color: #f1f1f1;
     padding: 10px 50px;
+    /* makes navbar appear above li elements in tiles and dropdowns */
+    z-index: 2;
 }
 
 .navbar a {

@@ -2,6 +2,8 @@ import '../styles/components/ProjectGalleryHeader.css';
 import Tags from '../content/Tags';
 import Options from '../enums';
 
+// TODO: Need to either implement pagination or allow it to be taller
+// than 95vh if entries exceed that size
 function ProjectGalleryHeader(props) {
   const handleFilterCheckbox = (event, filter) => {
     if (event.target.checked) {

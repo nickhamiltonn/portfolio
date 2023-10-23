@@ -101,6 +101,7 @@
     background-color: #eee;
 }
 
+/* TODO: Checkmark doesnt work anymore */
 .filter-container:hover input ~ .checkmark {
     background-color: #ccc;
 }
