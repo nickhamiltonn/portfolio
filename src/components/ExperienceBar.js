@@ -1,5 +1,46 @@
 import '../styles/components/ExperienceBar.css';
 
+const monthsTextShort = [
+  'Jan.',
+  'Feb.',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'Aug.',
+  'Sept.',
+  'Oct.',
+  'Nov.',
+  'Dec.'];
+
+const generateDateRange = (start, end) => {
+  const generateDaySuffix = (date) => {
+    switch (date % 10) {
+      case 1:
+        return 'st';
+      case 2:
+        return 'nd';
+      case 3:
+        return 'rd';
+      default:
+        return 'th';
+    }
+  };
+
+  let dateRange = '';
+  dateRange += monthsTextShort[start.getMonth()];
+  dateRange += ` ${start.getDate()}${generateDaySuffix(start.getDate())}`;
+  dateRange += ' - ';
+  if (end) {
+    dateRange += monthsTextShort[end.getMonth()];
+    dateRange += ` ${end.getDate()}${generateDaySuffix(end.getDate())}`;
+  } else {
+    dateRange += 'Current';
+  }
+  return dateRange;
+};
+
 function ExperienceBar(props) {
   return (
     <div className="bar">
@@ -11,8 +52,9 @@ function ExperienceBar(props) {
         </h1>
         <h2>
           {
-            // TODO: Calculate best way to display
-            // date given date_start and date_end
+            generateDateRange(
+                props.experience.date_start,
+                props.experience.date_end)
           }
         </h2>
         <p>
