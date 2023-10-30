@@ -4,8 +4,6 @@
     align-items: center;
     width: 80vw;
     height: 15vh;
-    /*border-top: 1px solid grey;
-    border-bottom: 1px solid grey;*/
     border-left: 3px solid rgb(146, 191, 221);
     margin: auto;
     margin-bottom: 20px;
@@ -17,6 +15,7 @@
 
 .bar:hover {
     background-position: left;
+    cursor: pointer;
 }
 
 .bar-logo {
@@ -33,6 +32,11 @@
 
 .bar-content {
     width: 100%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;  
 }
 
 .bar-content h1 {
@@ -50,51 +54,22 @@
     justify-content: space-between;
 }
 
+@media only screen and (max-width:550px) {
+    .bar-content-headers {
+        display: block;
+    }
+    
+    .bar-content {
+        -webkit-line-clamp: 5;
+    }
 
-
-
-
-.box {
-    width: 100px;
-    height: 100px;
-    display:inline-block;
-    background-size: 200% 200%;
-    transition: background-position 1s;
-  }
-  
-  .to-top{
-    background-image: linear-gradient(to top, red 50%, black 0);
-    background-position: top;
-  }
-  
-  .to-top:hover {
-    background-position: bottom;
-  }
-  
-  .to-bottom{
-    background-image: linear-gradient(to bottom, red 50%, black 0);
-    background-position: bottom;
-  }
-  
-  .to-bottom:hover {
-    background-position: top;
-  }
-  
-  .to-left{
-    background-image: linear-gradient(to left, red 50%, black 0);
-    background-position: left;
-  }
-  
-  .to-left:hover {
-    background-position: right;
-  }
-  
-  .to-right{
-    background-image: linear-gradient(to right, red 50%, black 0);
-    background-position: right;
-  }
-  
-  .to-right:hover {
-    background-position: left;
-  }
-
+    .bar-content h1 {
+        font-size: 15px;
+        margin: 0;
+    }
+    
+    .bar-content h2 {
+        font-size: 15px;
+        margin: 0;
+    }
+}
