@@ -1,11 +1,11 @@
-import '../styles/pages/Home.css';
+import '../styles/pages.css';
 
 import {Element} from 'react-scroll';
 
 function Home() {
   return (
     <Element name="home">
-      <div className="home">
+      <div className="home page">
         <div className="home-content">
           <h1>
             Nick Hamilton

@@ -11,9 +11,11 @@ const Tags = {
   },
   Frameworks: {
     React: 'React.js',
+    Node: 'Node.js',
     Pytorch: 'PyTorch',
   },
   Tools: {
+    Airflow: 'Airflow',
     GCP: 'GCP',
     AWS: 'AWS',
   },

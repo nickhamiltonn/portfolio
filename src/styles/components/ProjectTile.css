@@ -3,9 +3,12 @@
   width: 30vh;
   display: flex;
   flex-direction: column;
-  border: 1px solid #ccc;
+  border: 1px solid rgb(96, 96, 96);
   border-radius: 10px;
   margin: 5px;
+  -webkit-transition: background 0.5s;
+  transition: background 0.5s;
+  transition: transform 0.2s ease-in-out;
 }
 
 .tile p {
@@ -23,10 +26,16 @@
   text-overflow: ellipsis;  
 }
 
+.tile:hover {
+  background-color: rgb(146, 191, 221);
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
 .tile-header {
   height: 25%;
   padding: 5px 10px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid rgb(96, 96, 96);
   display: -webkit-flex;
   display: flex;
   align-items: center;
@@ -56,7 +65,7 @@
 
 .tile-bottom li {
   font-size: 14px;
-  border: 1px solid #ccc;
+  border: 1px solid rgb(96, 96, 96);
   border-radius: 10px;
   color: rgb(94, 94, 94);
   padding: 2px 5px;

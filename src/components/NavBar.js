@@ -10,6 +10,9 @@ function NavBar() {
         <Link to="home" spy={true} smooth={true} duration={500}>
           Home
         </Link>
+        <Link to="experience" spy={true} smooth={true} duration={500}>
+          Experience
+        </Link>
         <Link to="projects" spy={true} smooth={true} duration={500}>
           Projects
         </Link>
