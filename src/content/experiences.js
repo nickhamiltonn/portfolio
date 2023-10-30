@@ -18,7 +18,7 @@ const experiences = [
     'long_description': 'Did a lot more stuff',
     'tools': [
       Tags.Languages.Python,
-      // Tags.Frameworks.Airflow,
+      Tags.Frameworks.Airflow,
     ],
     'date_start': new Date(2022, 0),
     'date_end': new Date(2022, 7),

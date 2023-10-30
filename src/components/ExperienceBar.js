@@ -1,6 +1,6 @@
 import '../styles/components/ExperienceBar.css';
 
-const monthsTextShort = [
+const monthsShort = [
   'Jan.',
   'Feb.',
   'March',
@@ -15,11 +15,11 @@ const monthsTextShort = [
   'Dec.'];
 
 const generateDateRange = (start, end) => {
-  let dateRange = monthsTextShort[start.getMonth()];
+  let dateRange = monthsShort[start.getMonth()];
   dateRange += ` ${start.getFullYear()}`;
   dateRange += ' - ';
   if (end) {
-    dateRange += monthsTextShort[end.getMonth()];
+    dateRange += monthsShort[end.getMonth()];
     dateRange += ` ${end.getFullYear()}`;
   } else {
     dateRange += 'Current';

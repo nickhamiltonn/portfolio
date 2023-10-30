@@ -8,6 +8,7 @@
     padding: 0px 5px;
     margin: auto;
     margin-bottom: 20px;
+    /* Used for hover sliding background effect */
     background-size: 200% 200%;
     transition: background-position 0.75s;
     background-image: linear-gradient(to right, rgb(146, 191, 221) 50%, rgb(192, 211, 224) 0);
@@ -25,7 +26,7 @@
 }
 
 .bar-logo img {
-    display:block;
+    display: block;
     margin: auto;
     width: 60%;
     height: auto;
@@ -40,12 +41,7 @@
     text-overflow: ellipsis;  
 }
 
-.bar-content h1 {
-    font-size: 20px;
-    margin: 0;
-}
-
-.bar-content h2 {
+.bar-content h1, .bar-content h2 {
     font-size: 20px;
     margin: 0;
 }
@@ -64,13 +60,7 @@
         -webkit-line-clamp: 5;
     }
 
-    .bar-content h1 {
+    .bar-content h1, .bar-content h2 {
         font-size: 15px;
-        margin: 0;
-    }
-    
-    .bar-content h2 {
-        font-size: 15px;
-        margin: 0;
     }
 }

@@ -4,6 +4,7 @@ import '../styles/components/ProjectTile.css';
 // if they are going to fit entirely within the parent div...
 // This also includes the src component as well
 // figure out a solution here
+// TODO: Need to possibly add date/daterange in here?
 function ProjectTile(props) {
   return (
     <div className="tile">

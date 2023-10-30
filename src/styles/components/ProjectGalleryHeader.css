@@ -120,7 +120,7 @@
     display: block;
 }
 
-.container .checkmark:after {
+.filter-container .checkmark:after {
     left: 6px;
     top: 2px;
     width: 5px;

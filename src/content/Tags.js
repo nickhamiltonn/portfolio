@@ -15,7 +15,7 @@ const Tags = {
     Pytorch: 'PyTorch',
   },
   Tools: {
-    // Airflow: 'Airflow',
+    Airflow: 'Airflow',
     GCP: 'GCP',
     AWS: 'AWS',
   },
