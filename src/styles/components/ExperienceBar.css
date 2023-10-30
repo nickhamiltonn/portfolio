@@ -1,6 +1,100 @@
 .bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 80vw;
-    border-top: 1px solid grey;
-    border-bottom: 1px solid grey;
+    height: 15vh;
+    /*border-top: 1px solid grey;
+    border-bottom: 1px solid grey;*/
+    border-left: 3px solid rgb(146, 191, 221);
     margin: auto;
+    margin-bottom: 20px;
+    background-size: 200% 200%;
+    transition: background-position 0.75s;
+    background-image: linear-gradient(to right, rgb(146, 191, 221) 50%, rgb(192, 211, 224) 0);
+    background-position: right;
 }
+
+.bar:hover {
+    background-position: left;
+}
+
+.bar-logo {
+    width: 15vh;
+    flex-shrink: 0;
+}
+
+.bar-logo img {
+    display:block;
+    margin: auto;
+    width: 60%;
+    height: auto;
+}
+
+.bar-content {
+    width: 100%;
+}
+
+.bar-content h1 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.bar-content h2 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.bar-content-headers {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+.box {
+    width: 100px;
+    height: 100px;
+    display:inline-block;
+    background-size: 200% 200%;
+    transition: background-position 1s;
+  }
+  
+  .to-top{
+    background-image: linear-gradient(to top, red 50%, black 0);
+    background-position: top;
+  }
+  
+  .to-top:hover {
+    background-position: bottom;
+  }
+  
+  .to-bottom{
+    background-image: linear-gradient(to bottom, red 50%, black 0);
+    background-position: bottom;
+  }
+  
+  .to-bottom:hover {
+    background-position: top;
+  }
+  
+  .to-left{
+    background-image: linear-gradient(to left, red 50%, black 0);
+    background-position: left;
+  }
+  
+  .to-left:hover {
+    background-position: right;
+  }
+  
+  .to-right{
+    background-image: linear-gradient(to right, red 50%, black 0);
+    background-position: right;
+  }
+  
+  .to-right:hover {
+    background-position: left;
+  }
+

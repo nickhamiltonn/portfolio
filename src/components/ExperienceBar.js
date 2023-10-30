@@ -15,26 +15,12 @@ const monthsTextShort = [
   'Dec.'];
 
 const generateDateRange = (start, end) => {
-  const generateDaySuffix = (date) => {
-    switch (date % 10) {
-      case 1:
-        return 'st';
-      case 2:
-        return 'nd';
-      case 3:
-        return 'rd';
-      default:
-        return 'th';
-    }
-  };
-
-  let dateRange = '';
-  dateRange += monthsTextShort[start.getMonth()];
-  dateRange += ` ${start.getDate()}${generateDaySuffix(start.getDate())}`;
+  let dateRange = monthsTextShort[start.getMonth()];
+  dateRange += ` ${start.getFullYear()}`;
   dateRange += ' - ';
   if (end) {
     dateRange += monthsTextShort[end.getMonth()];
-    dateRange += ` ${end.getDate()}${generateDaySuffix(end.getDate())}`;
+    dateRange += ` ${end.getFullYear()}`;
   } else {
     dateRange += 'Current';
   }
@@ -45,17 +31,26 @@ function ExperienceBar(props) {
   return (
     <div className="bar">
       <div className="bar-logo">
+        <img
+          src={props.experience.logo ?
+            props.experience.logo :
+            require('../resources/logos/settings.png')}/>
       </div>
       <div className="bar-content">
-        <h1>
-          {props.experience.title}
-        </h1>
+        <div className='bar-content-headers'>
+          <h1>
+            {props.experience.title}
+          </h1>
+          <h1>
+            {
+              generateDateRange(
+                  props.experience.date_start,
+                  props.experience.date_end)
+            }
+          </h1>
+        </div>
         <h2>
-          {
-            generateDateRange(
-                props.experience.date_start,
-                props.experience.date_end)
-          }
+          <i>{props.experience.company}</i>
         </h2>
         <p>
           {props.experience.short_description}
