@@ -1,5 +1,6 @@
 .page {
     height: 95vh;
+    background-color: rgb(192, 211, 224)
 }
 
 .page > h1 {
@@ -18,31 +19,46 @@
 /* TODO: Make sure all usages appropriately use vw instead of vh where needed */
 
 .home {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    /*background-image: linear-gradient(
+        to bottom,
+        rgba(146, 191, 221, 0.8),
+        rgb(192, 211, 224)
+    ),
+    url("../resources/topography.svg");*/
+    /*background-image: url("../resources/topography.svg");*/
+    /*background-color: rgb(174, 208, 255);*/
+    height: 280vh;
+}
+
+.home-background {
     background-image: linear-gradient(
         to bottom,
         rgba(146, 191, 221, 0.8),
         rgb(192, 211, 224)
     ),
     url("../resources/topography.svg");
-    /*background-image: url("../resources/topography.svg");*/
-    /*background-color: rgb(174, 208, 255);*/
-    text-align: center;
+    height: 120vh;
 }
+
+/*.home-spacer {
+    height: 80vh;
+}*/
 
 .home-content {
     width: 40vh;
-    height: 50vh;
     margin-right: 10vh;
+    padding-top: 35vh;
+    padding-left: 10vw;
+    position: sticky;
+    top: 0;
+    display: inline-block;
 }
 
 .home-content h1 {
-    padding-top: 10vh;
+    align-self: flex-start;
     padding-bottom: 0;
     border-bottom: 3px solid black;
+    margin-top: 0;
     margin-bottom: 5vh;
     font-size: 50px;
 }
@@ -58,12 +74,25 @@
     margin-top: 5px;
 }
 
-.home img {
-    border-radius: 50%;
-    width: 50vh;
+.home .main-img {
+    width: auto;
+    height: 80vh;
+}
+
+.home .second-img {
+    padding-left: 70vw;
+    width: 30vh;
+    height: 20vh;
+}
+.home .third-img {
+    padding-left: 40vw;
+    width: 30vh;
     height: 50vh;
-    object-fit: cover;
-    object-position: 0px 0px;
+}
+.home .fourth-img {
+    padding-left: 20vw;
+    width: 20vh;
+    height: 10vh;
 }
 
 /* --- Experience Page --- */
@@ -71,6 +100,7 @@
 .experience {
     background-color: rgb(192, 211, 224);
     height: 60vh;
+    /*padding-top: 100vh;*/
 }
 
 /* --- Projects Page --- */

@@ -11,8 +11,10 @@ import {Element} from 'react-scroll';
 //       to be changed
 function App() {
   return (<>
+    <Home/>
+    <div className='page'>
+    </div>
     <NavBar />
-    <Home />
     <Experience />
     <Projects />
     <Element name="contact">

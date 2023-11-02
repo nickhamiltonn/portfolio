@@ -7,7 +7,7 @@ function NavBar() {
     <div className="navbar">
       <a className="logo">Nick</a>
       <div className="navbar-right">
-        <Link to="home" spy={true} smooth={true} duration={500}>
+        <Link to="thingy" spy={true} smooth={true} duration={500}>
           Home
         </Link>
         <Link to="experience" spy={true} smooth={true} duration={500}>
