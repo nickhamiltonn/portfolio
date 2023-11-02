@@ -1,0 +1,11 @@
+.fake-navbar {
+    position: sticky;
+    background-color: black;
+    color: white;
+    font-size: 7vh;
+    font-family: "Copperplate" ,"Lucida Console", Monospace;
+    height: 7vh;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+}
