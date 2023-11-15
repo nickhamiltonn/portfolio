@@ -1,28 +1,26 @@
 import '../styles/pages.css';
 
-import {Element} from 'react-scroll';
-
 function Home() {
   return (
-    <Element name="home">
-      <div className="home page">
-        <div className="home-content">
-          <h1>
-            Nick Hamilton
-          </h1>
-          <p className="home-sub1">
-            <b>Software Engineer</b> with experience in <b>Full-Stack</b> and
-            <b> ML Engineering</b>.
-          </p>
-          <p className="home-sub2">
-            UBC Computer Engineering Graduate.
-          </p>
+    <div className="home page">
+      <div className="home-links">
+        <div className="home-link-element">
+          About Me
         </div>
-        <div className="home-image">
-          <img src={require('../resources/DSCF2487.png')} alt="Photo of me!" />
+        <div className="home-link-element">
+          Projects
+        </div>
+        <div className="home-link-element">
+          Experience
+        </div>
+        <div className="home-link-element">
+          Contact
+        </div>
+        <div className="home-link-element">
+          Bonus
         </div>
       </div>
-    </Element>
+    </div>
   );
 }
 

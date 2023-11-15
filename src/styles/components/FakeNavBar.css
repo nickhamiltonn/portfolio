@@ -1,0 +1,11 @@
+.fake-navbar {
+    position: absolute;
+    background-color: black;
+    color: white;
+    font-size: 3vh;
+    font-family: "Copperplate" ,"Lucida Console", Monospace;
+    height: 3vh;
+    width: 100%;
+    top: 0;
+    overflow: hidden;
+}
