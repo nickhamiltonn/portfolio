@@ -37,7 +37,7 @@
         rgb(192, 211, 224)
     ),
     url("../resources/topography.svg");
-    height: 120vh;
+    height: 100vh;
 }
 
 /*.home-spacer {
@@ -76,7 +76,8 @@
 
 .home .main-img {
     width: auto;
-    height: 80vh;
+    height: 90vh;
+    padding-left: 10%;
 }
 
 .home .second-img {

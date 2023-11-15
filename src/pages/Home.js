@@ -32,11 +32,11 @@ function Home() {
         </p>
       </div>
 
-      {/* <img
-        src={require('../resources/DSCF2487.png')}
+      <img
+        src={require('../resources/images/home1.png')}
         alt="Photo of me!"
         className="main-img rellax"
-    data-rellax-speed="-5"/> */}
+        data-rellax-speed="-4"/>
       {/* <img
         src={require('../resources/DSCF2487.png')}
         alt="Photo of me!"
