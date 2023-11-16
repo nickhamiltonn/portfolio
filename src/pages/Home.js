@@ -1,5 +1,10 @@
 import '../styles/pages.css';
 
+// returns number within range of 1-max inclusively
+function getRandomInt(max) {
+  return 1 + Math.floor(Math.random() * max);
+};
+
 function Home(props) {
   const displayPageLinks = () => {
     const pageLinks = [];
@@ -17,7 +22,11 @@ function Home(props) {
   };
 
   return (
-    <div className="home page">
+    <div className="home page" style={{
+      backgroundImage:
+      `url(${require('../resources/home_pics/' +
+      getRandomInt(5) +
+      '.JPG')})`}}>
       <div className="home-links">
         {displayPageLinks()}
       </div>
