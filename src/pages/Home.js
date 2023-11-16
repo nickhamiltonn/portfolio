@@ -1,24 +1,25 @@
 import '../styles/pages.css';
 
-function Home() {
+function Home(props) {
+  const displayPageLinks = () => {
+    const pageLinks = [];
+    for (const page of Object.values(props.pages)) {
+      if (page != props.pages.HOME) {
+        pageLinks.push(
+            <div
+              className="home-link-element"
+              onClick={() => props.onChangePage(page)}>
+              {page}
+            </div>);
+      }
+    };
+    return pageLinks;
+  };
+
   return (
     <div className="home page">
       <div className="home-links">
-        <div className="home-link-element">
-          About Me
-        </div>
-        <div className="home-link-element">
-          Projects
-        </div>
-        <div className="home-link-element">
-          Experience
-        </div>
-        <div className="home-link-element">
-          Contact
-        </div>
-        <div className="home-link-element">
-          Bonus
-        </div>
+        {displayPageLinks()}
       </div>
     </div>
   );
