@@ -1,5 +1,5 @@
 .page {
-    height: 95vh;
+    height: 100vh;
 }
 
 .page > h1 {
@@ -19,58 +19,40 @@
 
 .home {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(
-        to bottom,
-        rgba(146, 191, 221, 0.8),
-        rgb(192, 211, 224)
-    ),
-    url("../resources/topography.svg");
-    /*background-image: url("../resources/topography.svg");*/
-    /*background-color: rgb(174, 208, 255);*/
-    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.home-content {
-    width: 40vh;
-    height: 50vh;
-    margin-right: 10vh;
+.home-links {
+    width: 20%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
-.home-content h1 {
-    padding-top: 10vh;
-    padding-bottom: 0;
-    border-bottom: 3px solid black;
-    margin-bottom: 5vh;
-    font-size: 50px;
-}
-
-.home-sub1 {
+.home-link-element {
     font-size: 20px;
-    margin-bottom: 0;
-    margin-top: 20px
+    padding: 4px;
+    margin: 4px;
+    color: white;
+    font-family: "Copperplate", serif;
 }
 
-.home-sub2 {
-    font-size: 20px;
-    margin-top: 5px;
-}
-
-.home img {
-    border-radius: 50%;
-    width: 50vh;
-    height: 50vh;
-    object-fit: cover;
-    object-position: 0px 0px;
+.home-link-element:hover {
+    background-color: rgb(146, 191, 221);
+    transition: background-color 0.5s;
+    cursor: pointer;
 }
 
 /* --- Experience Page --- */
 
 .experience {
     background-color: rgb(192, 211, 224);
-    height: 60vh;
 }
 
 /* --- Projects Page --- */
