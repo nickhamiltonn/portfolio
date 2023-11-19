@@ -24,6 +24,8 @@ const pages = {
 function App() {
   const [page, setPage] = useState(pages.HOME);
 
+  // TODO: Find a way to map/route? from ENUM to
+  //       PageComponent other than switch statement
   const renderPage = (currPage) => {
     switch (currPage) {
       case pages.HOME:
