@@ -1,9 +1,11 @@
 import {useEffect, useState} from 'react';
 import '../styles/components/FakeNavBar.css';
 
-/* TODO: kinda magic numbery...
-Make it add while it fits on screen not just an
-arbitrary amount of times  */
+// TODO: kinda magic numbery...
+//       could be fixed by hardcoding width of each word (gross), 
+//       or by appending divs while their width fits within parent
+//       might be a bit inefficient or incrementally load in
+//       with a lot of dom modifications / checking. Will keep for now.
 const generateDisplayedText = (text) => {
   let returnText = '';
   for (let i=0; i<15; i++) {
@@ -12,7 +14,8 @@ const generateDisplayedText = (text) => {
   return returnText;
 };
 
-/* TODO: Need to make this get pushed instead of overlapped */
+// TODO: This might require a refactor since component is
+//       being rerendered every 0.5 seconds.
 function FakeNavBar() {
   const [repeatedText, setRepeatedText] = useState('WEBSITE');
 
