@@ -5,6 +5,7 @@ import Experience from './pages/Experience';
 import Projects from './pages/Projects';
 import FakeNavBar from './components/FakeNavBar';
 import NavBar from './components/NavBar';
+import AboutMe from './pages/AboutMe';
 
 import {useState} from 'react';
 
@@ -34,6 +35,8 @@ function App() {
         return <Experience />;
       case pages.PROJECTS:
         return <Projects />;
+      case pages.ABOUT_ME:
+        return <AboutMe />;
     }
   };
 
