@@ -7,11 +7,12 @@
     padding-top: 10vh;
     padding-bottom: 5px;
     text-align: center;
-    border-bottom: 1px solid rgb(96, 96, 96);
+    border-bottom: 2px solid rgb(96, 96, 96);
     width: 75vw;
     margin: auto;
     margin-bottom: 5vh;
     font-size: 50px;
+    font-family: "Copperplate", serif;
 }
 
 /* --- Home Page --- */
@@ -59,4 +60,62 @@
 
 .projects {
     background-color: rgb(192, 211, 224);
+}
+
+/* --- About Me Page --- */
+.about-me {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(146, 191, 221, 0.8),
+        rgb(192, 211, 224)
+    ),
+    url("../resources/topography.svg");
+}
+
+.about-me-content {
+    display: flex;
+    justify-content: center;
+    padding-top: 3vh;
+}
+
+.about-me-descriptions {
+    width: 30vw;
+    padding-right: 8vw;
+    padding-top: 7vh;
+    font-size: 20px;
+    font-family: 'Source sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-me img {
+    border-radius: 20%;
+    align-self: center;
+    width: auto;
+    height: auto;
+}
+
+@media (max-width:1200px){
+    .about-me img {
+        max-width: 30vw;
+    }
+}
+
+@media (max-width:900px){
+    .about-me-content {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        padding-top: 3vh;
+    }
+    .about-me img {
+        max-width: 50vw;
+    }
+    .about-me-descriptions {
+        width: 80vw;
+        padding-top: 5vh;
+        padding-right: 0;
+        font-size: 17px;
+    }
 }

@@ -2,7 +2,7 @@ import {useEffect, useState} from 'react';
 import '../styles/components/FakeNavBar.css';
 
 // TODO: kinda magic numbery...
-//       could be fixed by hardcoding width of each word (gross), 
+//       could be fixed by hardcoding width of each word (gross),
 //       or by appending divs while their width fits within parent
 //       might be a bit inefficient or incrementally load in
 //       with a lot of dom modifications / checking. Will keep for now.
