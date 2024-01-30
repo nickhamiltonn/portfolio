@@ -15,6 +15,20 @@
     font-family: "Copperplate", serif;
 }
 
+/* --- Music Bar --- */
+iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color : transparent;
+}
+
+.music-next {
+    top: 0;
+    right: 0;
+    position: absolute;
+}
+
 /* --- Home Page --- */
 /* TODO: Make sure all usages appropriately use vw instead of vh where needed */
 
@@ -48,6 +62,17 @@
     background-color: rgb(146, 191, 221);
     transition: background-color 0.5s;
     cursor: pointer;
+}
+
+.home .thingy {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 560px;
+    height: 315px;
+    background-color: aqua;
+    z-index: 1;
+    pointer-events: none;
 }
 
 /* --- Experience Page --- */
