@@ -1,0 +1,59 @@
+.music-player {
+    width: 30vw;
+    height: 30vh;
+    position: absolute;
+    left: -29vw;
+    bottom: 150px;
+    background-color: rgb(192, 211, 224);
+    border-width: 1px;
+    border-color: rgb(96, 96, 96);
+    border-style: solid;
+    border-radius: 10px;
+    z-index: 1;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.music-player-edge {
+    width: 1vw;
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px rgb(96, 96, 96) solid;
+}
+
+.music-player-edge:hover {
+    cursor: pointer;
+}
+
+.music-player-content {
+    background-color: rgb(66, 121, 158);
+    width: 85%;
+    height: 85%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.embedded-youtube {
+    height: 150px;
+    width: 225px;
+    position: relative;
+}
+
+
+.open {
+    transition: transform 0.2s ease-in-out;
+    transform: translateX(29vw);
+}
+
+.closed {
+    transition: transform 0.2s ease-in-out;
+    transform: translateX(0px);
+}

@@ -40,6 +40,7 @@ function App() {
     }
   };
 
+
   // TODO: Should define background image here instead. The random number only
   //       gets changed if we are actually remounting, not just rerendering.
 
@@ -47,7 +48,7 @@ function App() {
     {page == pages.HOME ? <FakeNavBar /> :
     <NavBar pages={pages} onChangePage={setPage}/>}
     {renderPage(page)}
-    <MusicTile />
+    <MusicTile/>
   </>
   );
 }
