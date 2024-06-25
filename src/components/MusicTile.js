@@ -1,20 +1,15 @@
-import '../styles/components/MusicTile.css';
+import "../styles/components/MusicTile.css";
 
-import {useState} from 'react';
-import YouTube from 'react-youtube';
+import { useState } from "react";
+import YouTube from "react-youtube";
 
-const SONG_IDS = [
-  'HldHtBxNK6k',
-  '4gYi0NyZMZg',
-  'o7sx32alzeE',
-];
+const SONG_IDS = ["HldHtBxNK6k", "4gYi0NyZMZg", "o7sx32alzeE", "mcWLp2LpYXQ"];
 
 const musicPlayerOptions = {
-  height: '125',
-  width: '200',
+  height: "150",
+  width: "225",
   playerVars: {
-    // https://developers.google.com/youtube/player_parameters
-    autoplay: 1,
+    autoplay: 0,
     controls: 0,
   },
 };
@@ -23,59 +18,70 @@ function MusicTile() {
   const [songIndex, setSongIndex] = useState(0);
   const [player, setPlayer] = useState();
   const [isOpen, setIsOpen] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   function _onReady(e) {
     setPlayer(e.target);
-  };
+  }
 
   const playVid = () => {
     player.playVideo();
+    setIsPlaying(true);
   };
 
   const pauseVid = () => {
     player.pauseVideo();
-  };
-
-  const muteVid = () => {
-    player.mute();
-  };
-
-  const unMuteVid = () => {
-    player.unMute();
+    setIsPlaying(false);
   };
 
   const nextSong = () => {
-    setSongIndex((songIndex+1) % SONG_IDS.length);
+    setSongIndex((songIndex + 1) % SONG_IDS.length);
+    setIsPlaying(false);
   };
 
-  return (<>
-    <div className={`music-player ${isOpen ? 'open' : 'closed'}`}>
-      <div className='music-player-edge'
-        onClick={() => setIsOpen(!isOpen)}>
-        {isOpen ? '<' : '>'}
-      </div>
-      <div className='music-player-content'>
-        <p>
-          Video Title
-        </p>
-        <div className='embedded-youtube'>
-          <YouTube
-            videoId={SONG_IDS[songIndex]}
-            opts={musicPlayerOptions}
-            onReady={_onReady}/>
+  return (
+    <>
+      <div className={`music-player ${isOpen ? "open" : "closed"}`}>
+        <div className="music-player-edge" onClick={() => setIsOpen(!isOpen)}>
+          {isOpen ? "<" : ">"}
         </div>
-        <div className='music-controls'>
-          <button onClick={muteVid}>Mute</button>
-          <button onClick={unMuteVid}>Unmute</button>
-          <button onClick={pauseVid}>Pause</button>
-          <button onClick={playVid}>play</button>
-          <button onClick={nextSong}>nextSong</button>
+        <div className="music-player-content">
+          {player && player.videoTitle && (
+            <h2 className="music-player-title">{player.videoTitle}</h2>
+          )}
+          <div className="embedded-youtube">
+            <YouTube
+              videoId={SONG_IDS[songIndex]}
+              opts={musicPlayerOptions}
+              onReady={_onReady}
+            />
+          </div>
+          <div className="music-controls">
+            {!isPlaying ? (
+              <img
+                src={require("../resources/music_player/play.png")}
+                onClick={playVid}
+              />
+            ) : (
+              <img
+                src={require("../resources/music_player/pause.png")}
+                onClick={pauseVid}
+              />
+            )}
+            <img
+              src={require("../resources/music_player/next.png")}
+              onClick={nextSong}
+            />
+
+            {/*<button onClick={pauseVid}>Pause</button>
+            <button onClick={playVid}>Play</button>
+          <button onClick={nextSong}>Next Song</button>*/}
+          </div>
         </div>
       </div>
-    </div>
-    <div className='music-next'>
-    </div>
-  </>);
-};
+      <div className="music-next"></div>
+    </>
+  );
+}
 
 export default MusicTile;
