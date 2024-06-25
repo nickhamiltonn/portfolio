@@ -6,6 +6,7 @@ import Projects from './pages/Projects';
 import FakeNavBar from './components/FakeNavBar';
 import NavBar from './components/NavBar';
 import AboutMe from './pages/AboutMe';
+import MusicTile from './components/MusicTile';
 
 import {useState} from 'react';
 
@@ -15,7 +16,6 @@ const pages = {
   EXPERIENCE: 'Experience',
   PROJECTS: 'Projects',
   ABOUT_ME: 'About Me',
-  CONTACT: 'Contact',
   BONUS: 'Bonus',
 };
 
@@ -40,10 +40,15 @@ function App() {
     }
   };
 
+
+  // TODO: Should define background image here instead. The random number only
+  //       gets changed if we are actually remounting, not just rerendering.
+
   return (<>
     {page == pages.HOME ? <FakeNavBar /> :
     <NavBar pages={pages} onChangePage={setPage}/>}
     {renderPage(page)}
+    <MusicTile/>
   </>
   );
 }
