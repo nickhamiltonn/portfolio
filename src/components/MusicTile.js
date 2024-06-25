@@ -72,10 +72,6 @@ function MusicTile() {
               src={require("../resources/music_player/next.png")}
               onClick={nextSong}
             />
-
-            {/*<button onClick={pauseVid}>Pause</button>
-            <button onClick={playVid}>Play</button>
-          <button onClick={nextSong}>Next Song</button>*/}
           </div>
         </div>
       </div>
