@@ -1,0 +1,26 @@
+.modal {
+  height: 75vh;
+  width: 75vw;
+  position: absolute;
+  left: 12.5vw;
+  top: 10%;
+  background-color: brown;
+}
+
+.modal-header {
+  height: 30px;
+  padding: 10px;
+}
+
+.modal-content {
+  padding: 16px 30px;
+}
+
+.modal-content p {
+  margin: 0;
+}
+
+.close-icon {
+  height: 25px;
+  float: right;
+}
