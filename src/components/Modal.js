@@ -1,7 +1,19 @@
+import { useEffect } from "react";
 import { createPortal } from "react-dom";
 import "../styles/components/Modal.css";
 
-function Modal({ isOpen, onClose, content }) {
+function Modal({ isOpen, onClose, title, content, image }) {
+  // This seems to work. This approach is somewhat bad practice however
+  useEffect(() => {
+    if (isOpen) {
+      document.getElementById("root").style.filter = "blur(5px)";
+      document.getElementById("root").style.pointerEvents = "none";
+    } else {
+      document.getElementById("root").style.filter = null;
+      document.getElementById("root").style.pointerEvents = null;
+    }
+  }, [isOpen]);
+
   if (!isOpen) return null;
 
   return (
@@ -16,6 +28,7 @@ function Modal({ isOpen, onClose, content }) {
             />
           </div>
           <div className="modal-content">
+            <h2>{title}</h2>
             <p>{content}</p>
           </div>
         </div>,

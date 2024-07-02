@@ -14,7 +14,24 @@ const experiences = [
     short_description: `Owned, designed, and implemented features for internal 
             timekeeping/scheduling system for various platforms using 
             React.js/React Native/Electron and Node.js/Express.js.`,
-    long_description: "Did a lot more stuff",
+    long_description: `Did a lot more stuff. Built RESTFul Python API for serving real-time inference
+    results. Refactored/modularized batch airflow pipeline, 
+    led discovery/documentation tasks. Built RESTFul Python API for serving real-time inference
+    results. Refactored/modularized batch airflow pipeline, 
+    led discovery/documentation tasks. Built RESTFul Python API for serving real-time inference
+    results. Refactored/modularized batch airflow pipeline, 
+    led discovery/documentation tasks. Built RESTFul Python API for serving real-time inference
+    results. Refactored/modularized batch airflow pipeline, 
+    led discovery/documentation tasksBuilt RESTFul Python API for serving real-time inference
+    results. Refactored/modularized batch airflow pipeline, 
+    led discovery/documentation tasks. Built RESTFul Python API for serving real-time inference
+    results. Refactored/modularized batch airflow pipeline, 
+    led discovery/documentation tasks
+    
+    Built RESTFul Python API for serving real-time inference
+            results. Refactored/modularized batch airflow pipeline, 
+            led discovery/documentation tasks
+    `,
     tools: [
       Tags.Languages.Javascript,
       Tags.Frameworks.React,
