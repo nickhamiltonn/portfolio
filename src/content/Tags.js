@@ -7,6 +7,7 @@ const Tags = {
     C: "C",
     CPP: "C++",
     CSharp: "C#",
+    Swift: "Swift",
     HTML: "HTML",
     CSS: "CSS",
     Latex: "LaTeX",
@@ -21,7 +22,7 @@ const Tags = {
   },
   Tools: {
     Airflow: "Airflow",
-    GCP: "GCP",
+    GCP: "Google Cloud Platform",
     AWS: "AWS",
     Docker: "Docker",
     Kubernetes: "Kubernetes",

@@ -36,6 +36,7 @@ function ProjectTile(props) {
         onClose={() => setModalOpen(false)}
         title={props.project.name}
         content={props.project.long_description}
+        tags={props.project.tools}
       />
     </>
   );

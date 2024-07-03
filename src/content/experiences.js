@@ -23,6 +23,7 @@ const experiences = [
     onboarding our system to a new Gigafactory location, supporting 80,000 employees and 
     up to 200 transactions/sec.`,
     tools: [
+      Tags.Languages.Javascript,
       Tags.Languages.Typescript,
       Tags.Languages.CSharp,
       Tags.Frameworks.React,
@@ -40,8 +41,14 @@ const experiences = [
     company: "Borealis AI",
     short_description: `Built RESTFul Python API for serving real-time inference
             results. Refactored/modularized batch airflow pipeline, 
-            led discovery/documentation tasks`,
-    long_description: "Did a lot more stuff",
+            led discovery/documentation tasks.`,
+    long_description: `My primary responsibility at Borealis AI was building an object-oriented Python FastAPI 
+      service that served ML inference results. I designed/implemented many features for this 
+      service and spearheaded the creation of the Jenkins DevOps pipeline, utilizing 
+      Docker/Kubernetes and OpenShift Container Platform.  In doing so, I saw a benefit and 
+      introduced Helm to my team, intimately presenting engineering-wide on the tool. Finally, 
+      I also worked heavily on an Airflow inference pipeline and enabled the pipeline to 
+      support configurable models.`,
     tools: [
       Tags.Languages.Python,
       Tags.Frameworks.FastAPI,
@@ -62,12 +69,15 @@ const experiences = [
     short_description: `Built React.js frontend for collaboration pages. Assisted
              in a re-implementation of the login portals. Designed
              and implemented full-stack functionality for uploading
-             profile pictures`,
-    long_description: "Did a lot more stuff",
+             profile pictures.`,
+    long_description: `At Realtor.com I independently built a React.js front-end for an award-winning 
+    new collaboration feature. I also re-implemented the product’s login page to achieve accessibility 
+    (ADA) compliance and designed/implemented a full-stack profile picture upload feature. `,
     tools: [
       Tags.Languages.Javascript,
       Tags.Frameworks.React,
-      Tags.Frameworks.Node,
+      Tags.Frameworks.NodeExpress,
+      Tags.Tools.AWS,
     ],
     date_start: new Date(2021, 4),
     date_end: new Date(2021, 11),
