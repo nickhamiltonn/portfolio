@@ -12,23 +12,8 @@
   margin: auto;
   margin-bottom: 5vh;
   font-size: 36pt;
-  font-family: "CircularStd", Sans-serif;
+  font-family: "Copperplate", serif;
   font-weight: 900;
-}
-
-/* --- Music Bar --- */
-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: transparent;
-  z-index: 0;
-}
-
-.music-next {
-  top: 0;
-  right: 0;
-  position: absolute;
 }
 
 /* --- Home Page --- */
@@ -66,17 +51,6 @@ iframe {
   cursor: pointer;
 }
 
-.home .thingy {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 560px;
-  height: 315px;
-  background-color: aqua;
-  z-index: 1;
-  pointer-events: none;
-}
-
 /* --- Experience Page --- */
 
 /*.experience {
@@ -95,6 +69,17 @@ iframe {
 
 .projects {
   background-color: rgb(207, 224, 220);
+}
+
+/* --- Resume Page --- */
+
+.resume {
+  padding-top: 65px;
+}
+
+.resume embed {
+  width: 100vw;
+  height: calc(100vh - 65px);
 }
 
 /* --- About Me Page --- */

@@ -14,28 +14,22 @@ const experiences = [
     short_description: `Owned, designed, and implemented features for internal 
             timekeeping/scheduling system for various platforms using 
             React.js/React Native/Electron and Node.js/Express.js.`,
-    long_description: `Did a lot more stuff. Built RESTFul Python API for serving real-time inference
-    results. Refactored/modularized batch airflow pipeline, 
-    led discovery/documentation tasks. Built RESTFul Python API for serving real-time inference
-    results. Refactored/modularized batch airflow pipeline, 
-    led discovery/documentation tasks. Built RESTFul Python API for serving real-time inference
-    results. Refactored/modularized batch airflow pipeline, 
-    led discovery/documentation tasks. Built RESTFul Python API for serving real-time inference
-    results. Refactored/modularized batch airflow pipeline, 
-    led discovery/documentation tasksBuilt RESTFul Python API for serving real-time inference
-    results. Refactored/modularized batch airflow pipeline, 
-    led discovery/documentation tasks. Built RESTFul Python API for serving real-time inference
-    results. Refactored/modularized batch airflow pipeline, 
-    led discovery/documentation tasks
-    
-    Built RESTFul Python API for serving real-time inference
-            results. Refactored/modularized batch airflow pipeline, 
-            led discovery/documentation tasks
-    `,
+    long_description: `At Tesla I owned, designed, and implemented features for an internal 
+    timekeeping/scheduling system. This project was built for various platforms using 
+    React.js/React Native/Electron and Node.js/Express.js. Some of the things I implemented 
+    were push notifications and subsequent deep-linking on an internal mobile app for 
+    35,000+ employees, a virtual keyboard input for our Electron/Kiosk application, and some 
+    new C# and Node.js backend API endpoints. I also assisted in deploying changes while 
+    onboarding our system to a new Gigafactory location, supporting 80,000 employees and 
+    up to 200 transactions/sec.`,
     tools: [
-      Tags.Languages.Javascript,
+      Tags.Languages.Typescript,
+      Tags.Languages.CSharp,
       Tags.Frameworks.React,
-      Tags.Frameworks.Node,
+      Tags.Frameworks.ReactNative,
+      Tags.Frameworks.NodeExpress,
+      Tags.Tools.Docker,
+      Tags.Databases.MySQL,
     ],
     date_start: new Date(2024, 2),
     date_end: new Date(2024, 5),
@@ -48,7 +42,16 @@ const experiences = [
             results. Refactored/modularized batch airflow pipeline, 
             led discovery/documentation tasks`,
     long_description: "Did a lot more stuff",
-    tools: [Tags.Languages.Python, Tags.Frameworks.Airflow],
+    tools: [
+      Tags.Languages.Python,
+      Tags.Frameworks.FastAPI,
+      Tags.Tools.Docker,
+      Tags.Tools.Kubernetes,
+      Tags.Tools.Helm,
+      Tags.Tools.Jenkins,
+      Tags.Tools.OCP,
+      Tags.Tools.Airflow,
+    ],
     date_start: new Date(2022, 0),
     date_end: new Date(2022, 7),
     logo: require("../resources/logos/borealis-ai.png"),

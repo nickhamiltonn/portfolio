@@ -6,6 +6,7 @@ import Projects from "./pages/Projects";
 import FakeNavBar from "./components/FakeNavBar";
 import NavBar from "./components/NavBar";
 import AboutMe from "./pages/AboutMe";
+import Resume from "./pages/Resume";
 import MusicTile from "./components/MusicTile";
 
 import { useState } from "react";
@@ -16,7 +17,7 @@ const pages = {
   EXPERIENCE: "Experience",
   PROJECTS: "Projects",
   ABOUT_ME: "About Me",
-  BONUS: "Bonus",
+  RESUME: "Resume",
 };
 
 // TODO: Make items in the navbar get passed in as props from this scope
@@ -37,6 +38,8 @@ function App() {
         return <Projects />;
       case pages.ABOUT_ME:
         return <AboutMe />;
+      case pages.RESUME:
+        return <Resume />;
     }
   };
 

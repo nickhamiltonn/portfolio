@@ -1,15 +1,17 @@
 .project-gallery {
-    /*background-color: white;*/
-    border: 1px solid rgb(96, 96, 96);
-    border-radius: 10px;
-    width: 85%;
-    margin: auto;
+  /*background-color: white;*/
+  border: 1px solid rgb(96, 96, 96);
+  border-radius: 10px;
+  width: 85%;
+  margin: auto;
 }
 
 .projects-list {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 5px;
-    /* Makes ProjectTiles appear behind header dropdowns */
-    z-index: 0;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+  /* Makes ProjectTiles appear behind header dropdowns */
+  z-index: 0;
+  max-height: 60vh;
+  overflow: scroll;
 }
