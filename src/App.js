@@ -1,22 +1,22 @@
-import './App.css';
+import "./App.css";
 
-import Home from './pages/Home';
-import Experience from './pages/Experience';
-import Projects from './pages/Projects';
-import FakeNavBar from './components/FakeNavBar';
-import NavBar from './components/NavBar';
-import AboutMe from './pages/AboutMe';
-import MusicTile from './components/MusicTile';
+import Home from "./pages/Home";
+import Experience from "./pages/Experience";
+import Projects from "./pages/Projects";
+import FakeNavBar from "./components/FakeNavBar";
+import NavBar from "./components/NavBar";
+import AboutMe from "./pages/AboutMe";
+import MusicTile from "./components/MusicTile";
 
-import {useState} from 'react';
+import { useState } from "react";
 
 // Enum Name : Displayed Page Name
 const pages = {
-  HOME: 'Home',
-  EXPERIENCE: 'Experience',
-  PROJECTS: 'Projects',
-  ABOUT_ME: 'About Me',
-  BONUS: 'Bonus',
+  HOME: "Home",
+  EXPERIENCE: "Experience",
+  PROJECTS: "Projects",
+  ABOUT_ME: "About Me",
+  BONUS: "Bonus",
 };
 
 // TODO: Make items in the navbar get passed in as props from this scope
@@ -30,7 +30,7 @@ function App() {
   const renderPage = (currPage) => {
     switch (currPage) {
       case pages.HOME:
-        return <Home pages={pages} onChangePage={setPage}/>;
+        return <Home pages={pages} onChangePage={setPage} />;
       case pages.EXPERIENCE:
         return <Experience />;
       case pages.PROJECTS:
@@ -40,16 +40,19 @@ function App() {
     }
   };
 
-
   // TODO: Should define background image here instead. The random number only
   //       gets changed if we are actually remounting, not just rerendering.
 
-  return (<>
-    {page == pages.HOME ? <FakeNavBar /> :
-    <NavBar pages={pages} onChangePage={setPage}/>}
-    {renderPage(page)}
-    <MusicTile/>
-  </>
+  return (
+    <>
+      {page == pages.HOME ? (
+        <FakeNavBar />
+      ) : (
+        <NavBar pages={pages} onChangePage={setPage} />
+      )}
+      {renderPage(page)}
+      <MusicTile />
+    </>
   );
 }
 
