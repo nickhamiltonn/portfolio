@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.a786e95e.css",
+    "main.js": "/portfolio/static/js/main.8bbf8f02.js",
+    "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
+    "static/media/4.JPG": "/portfolio/static/media/4.62160eb29fbe60c172a1.JPG",
+    "static/media/1.JPG": "/portfolio/static/media/1.e973a4bf7527032a8172.JPG",
+    "static/media/5.JPG": "/portfolio/static/media/5.d723abdb0a7afa6b7757.JPG",
+    "static/media/3.JPG": "/portfolio/static/media/3.66824449950afcf6b330.JPG",
+    "static/media/2.JPG": "/portfolio/static/media/2.e7c320a54eb776714a7d.JPG",
+    "static/media/DSCF2487.png": "/portfolio/static/media/DSCF2487.6c83258702f377c9a349.png",
+    "static/media/resume.pdf": "/portfolio/static/media/resume.dfd9ee26df079068d543.pdf",
+    "static/media/lord-stingray.png": "/portfolio/static/media/lord-stingray.d6ee4b20f23f08fb59c8.png",
+    "static/media/topography.svg": "/portfolio/static/media/topography.fee9c91f83f80994957a.svg",
+    "static/media/realtor.com.png": "/portfolio/static/media/realtor.com.2ac552fa171a37f983d8.png",
+    "static/media/borealis-ai.png": "/portfolio/static/media/borealis-ai.345f1f961fa6bd285f69.png",
+    "static/media/settings.png": "/portfolio/static/media/settings.57e5be09e86bb5c5c17c.png",
+    "static/media/repeating-triangles.svg": "/portfolio/static/media/repeating-triangles.64189eedbde4758c5e44.svg",
+    "static/media/instagram.svg": "/portfolio/static/media/instagram.6948ea4bbc157936009c100ce4e6e678.svg",
+    "static/media/linkedin.svg": "/portfolio/static/media/linkedin.171001b536ab25e981a58e1ea76991dc.svg",
+    "static/media/github.svg": "/portfolio/static/media/github.255db585f8a0eb28a1e4deb91bde207d.svg",
+    "index.html": "/portfolio/index.html",
+    "main.a786e95e.css.map": "/portfolio/static/css/main.a786e95e.css.map",
+    "main.8bbf8f02.js.map": "/portfolio/static/js/main.8bbf8f02.js.map",
+    "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a786e95e.css",
+    "static/js/main.8bbf8f02.js"
+  ]
+}
