@@ -81,6 +81,8 @@ function ProjectGallery(props) {
     }
   };
 
+  let tiles = renderTiles(filterAndSortProjects());
+
   return (
     <div className="project-gallery">
       <ProjectGalleryHeader
@@ -90,7 +92,11 @@ function ProjectGallery(props) {
         onSortOptionChange={handleSortOptionChange}
       />
       <div className="projects-list">
-        {renderTiles(filterAndSortProjects())}
+        {tiles && tiles.length ? (
+          renderTiles(filterAndSortProjects())
+        ) : (
+          <p>There are no projects that match these filters...</p>
+        )}
       </div>
     </div>
   );
