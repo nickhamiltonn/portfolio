@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { createPortal } from "react-dom";
 import "../styles/components/Modal.css";
 
-function Modal({ isOpen, onClose, title, content, image }) {
+function Modal({ isOpen, onClose, title, content, tags, image }) {
   // This seems to work. This approach is somewhat bad practice however
   if (isOpen) {
     document.getElementById("root").style.filter = "blur(5px)";
@@ -26,8 +26,17 @@ function Modal({ isOpen, onClose, title, content, image }) {
             />
           </div>
           <div className="modal-content">
-            <h2>{title}</h2>
-            <p>{content}</p>
+            <div>
+              <h2>{title}</h2>
+              <p>{content}</p>
+            </div>
+            {tags && (
+              <ul className="modal-tags">
+                {tags.map((tag) => (
+                  <li key={tag}>{tag}</li>
+                ))}
+              </ul>
+            )}
           </div>
         </div>,
         document.body

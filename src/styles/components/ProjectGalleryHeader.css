@@ -29,6 +29,8 @@
   margin-top: 2px;
   /* Makes dropdown windows appear in front of ProjectTiles */
   z-index: 1;
+  max-height: 60vh;
+  overflow: scroll;
 }
 
 .dropdown .tools-category {

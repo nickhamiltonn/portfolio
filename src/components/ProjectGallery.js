@@ -1,14 +1,14 @@
-import {useState} from 'react';
+import { useState } from "react";
 
-import ProjectTile from './ProjectTile';
-import ProjectGalleryHeader from './ProjectGalleryHeader';
-import '../styles/components/ProjectGallery.css';
-import Options from '../enums';
+import ProjectTile from "./ProjectTile";
+import ProjectGalleryHeader from "./ProjectGalleryHeader";
+import "../styles/components/ProjectGallery.css";
+import Options from "../enums";
 
 const renderTiles = (projects) => {
   const projectsJSX = [];
   projects.forEach((project) => {
-    projectsJSX.push(<ProjectTile project={project}/>);
+    projectsJSX.push(<ProjectTile project={project} />);
   });
   return projectsJSX;
 };
@@ -19,8 +19,6 @@ function ProjectGallery(props) {
   const [filters, setFilters] = useState([]);
   const [filterOption, setFilterOption] = useState(Options.Filter.Any);
   const [sortOption, setSortOption] = useState(Options.Sort.Latest);
-
-  console.log(`filterOption: ${filterOption}`);
 
   const handleFilterOptionChange = (newOption) => {
     setFilterOption(newOption);
@@ -35,7 +33,7 @@ function ProjectGallery(props) {
     const applyFilter = (proj) => {
       if (filterOption == Options.Filter.Any) {
         // return true iff any active filter is found in proj
-        for (let i=0; i<filters.length; i++) {
+        for (let i = 0; i < filters.length; i++) {
           if (proj.tools.includes(filters[i])) {
             return true;
           }
@@ -43,7 +41,7 @@ function ProjectGallery(props) {
         return false;
       } else if (filterOption == Options.Filter.All) {
         // return true iff all active filters are found in proj
-        for (let i=0; i<filters.length; i++) {
+        for (let i = 0; i < filters.length; i++) {
           if (!proj.tools.includes(filters[i])) {
             return false;
           }
@@ -60,9 +58,9 @@ function ProjectGallery(props) {
 
     organizedProjects.sort((a, b) => {
       if (a.date < b.date) {
-        return (sortOption == Options.Sort.Oldest ? -1 : 1);
+        return sortOption == Options.Sort.Oldest ? -1 : 1;
       } else {
-        return (sortOption == Options.Sort.Latest ? -1 : 1);
+        return sortOption == Options.Sort.Latest ? -1 : 1;
       }
     });
 
@@ -71,10 +69,7 @@ function ProjectGallery(props) {
 
   const handleAddFilter = (filter) => {
     if (filters.indexOf(filter) == -1) {
-      setFilters([
-        ...filters,
-        filter,
-      ]);
+      setFilters([...filters, filter]);
     }
   };
 
@@ -86,15 +81,22 @@ function ProjectGallery(props) {
     }
   };
 
+  let tiles = renderTiles(filterAndSortProjects());
+
   return (
     <div className="project-gallery">
       <ProjectGalleryHeader
         onAddFilter={handleAddFilter}
         onRemoveFilter={handleRemoveFilter}
         onFilterOptionChange={handleFilterOptionChange}
-        onSortOptionChange={handleSortOptionChange}/>
+        onSortOptionChange={handleSortOptionChange}
+      />
       <div className="projects-list">
-        {renderTiles(filterAndSortProjects())}
+        {tiles && tiles.length ? (
+          renderTiles(filterAndSortProjects())
+        ) : (
+          <p>There are no projects that match these filters...</p>
+        )}
       </div>
     </div>
   );

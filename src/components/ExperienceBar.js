@@ -71,6 +71,7 @@ function ExperienceBar(props) {
         onClose={() => setModalOpen(false)}
         title={`${props.experience.company} - ${props.experience.title}`}
         content={props.experience.long_description}
+        tags={props.experience.tools}
       />
     </>
   );
